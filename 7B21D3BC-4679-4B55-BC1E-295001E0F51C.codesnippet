@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>create_cell</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>static NSString *ID = @"&lt;#cell#&gt;";
+UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+if (cell == nil) {
+    cell = [[[NSBundle mainBundle]loadNibNamed:ID owner:nil options:nil] lastObject];
+} else {
+    while ([cell.contentView.subviews lastObject] != nil) {
+        [(UIView *)[cell.contentView.subviews lastObject] removeFromSuperview];
+    }
+}
+return cell;
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7B21D3BC-4679-4B55-BC1E-295001E0F51C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>create_cell</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

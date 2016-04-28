@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>scroll_page</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat width=scrollView.frame.size.width;
+    CGPoint point = scrollView.contentOffset;
+    if (!fmodf(point.x, width)) {
+        NSInteger page = (point.x + width *0.5) / width ;
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>85723C2A-1C92-461B-9793-FCC9CA1A3351</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>scrollview page</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
